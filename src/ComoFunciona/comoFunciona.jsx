@@ -15,7 +15,7 @@ import "./ComoFunciona.css";
 const ComoFunciona = ({ active }) => {
 
   return (
-    <div className="flex flex-col h-screen w-screen justify-center sm:flex-row sm:justify-center pb-40">
+    <div className="flex flex-col h-full w-full justify-center sm:flex-row sm:justify-center pt-40">
       <div className="flex-row self-center pb-5 sm:pb-0 px-10 ">
         <Fade left  when={active}>
           <img

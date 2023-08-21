@@ -137,8 +137,8 @@ export default function Navbar() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-gray-800"
-                      : "hover:bg-violet-700 hover:text-gray-800",
-                    "block px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-violet-700"
+                      : "hover:bg-blue-700 hover:text-gray-800",
+                    "block px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-blue-700"
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
