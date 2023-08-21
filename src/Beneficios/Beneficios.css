@@ -1,7 +1,9 @@
 @media (max-width: 550px){
     .reward{
-        height: 400px!important;
-        width: 400px!important;
+        height: 300px;
+        width: 300px;
+        max-height: 400px!important;
+        max-width: 400px!important;
     }
 }
 .reward{

@@ -110,7 +110,7 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#fifthPage"
+                            href="#thirdPage"
                             className={classNames(
                               active ? "bg-blue-700 " : "",
                               "block px-4 py-2 text-sm text-white "
