@@ -17,4 +17,5 @@
 
 .beneficios{
     height: calc(100vh - 64px) !important;
+    width: 100vw!important;
 }

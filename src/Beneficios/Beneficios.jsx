@@ -9,7 +9,7 @@ import "./Beneficios.css";
 function Beneficios({ active }) {
   return (
     <div className=" flex flex-col sm:flex-row sm:pt-10 sm:pt-40 beneficios">
-      <div className="flex flex-row self-start sm:flex-col w-full h-full sm:pt-10 ">
+      <div className="flex flex-row self-center justify-center m:flex-col w-full h-full sm:pt-10 ">
         <Fade clear delay={100} when={active}>
           <img
             className="self-center w-full h-full reward"
