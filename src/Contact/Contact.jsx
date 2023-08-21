@@ -67,7 +67,7 @@ const Contact = ({ active }) => {
   };
   return (
     
-      <div className="flex flex-col h-full md:justify-start 2xl:justify-center md:flex-row md:p-6 pt-5 sm:pt-10">
+      <div className="flex flex-col  md:justify-start 2xl:justify-center md:flex-row md:p-6 sm:pt-10 contactoGrow">
         <div className="flex flex-col self-center  md:px-4">
         
             <img src={contact} alt="contact-logo" className="contact_logo max-w-xl" />
