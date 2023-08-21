@@ -38,7 +38,7 @@ function App() {
         // slidesNavPosition={"bottom"}
         scrollingSpeed={500}
         // easing={"easeInOutCubic"}
-        // parallax={true}
+        parallax={true}
         lazyLoading={true}
         render={({ fullpageApi }) => {
           return (

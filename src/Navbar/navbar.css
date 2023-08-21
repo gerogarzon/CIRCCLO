@@ -10,6 +10,7 @@ padding: 0px!important;
 .navbar_fixed{
     position:sticky;
     z-index: 100;
+    background-color: #FFFFFF!important;
 }
 .currentPage {
    color: #0429D0;
