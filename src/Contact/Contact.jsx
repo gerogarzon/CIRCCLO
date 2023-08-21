@@ -8,7 +8,7 @@ import quierosumarme from "../assets/quierosumarme.png";
 
 
 import Pulse from "react-reveal/Pulse";
-import Slide from "react-reveal/Slide";
+// import Slide from "react-reveal/Slide";
 // import styles
 import "./contact.css";
 
@@ -74,7 +74,7 @@ const Contact = ({ active }) => {
          
         </div>
         <div className="flex flex-col self-center w-4/5 md:w-2/5 px-4">
-        <Pulse delay={1400} when={active}>
+        <Pulse delay={200} when={active}>
             <img src={quierosumarme} alt="contact-logo" className=" sumarmeLogo max-w-sm max-h-sm" />
           </Pulse>
           <form
@@ -83,9 +83,9 @@ const Contact = ({ active }) => {
             ref={form}
             onSubmit={sendEmail}
           >
-            <div className="my-5">
+            <div className="mt-2">
               {/* <label className="text-sm mb-2 md:text-lg text-black">Name</label> */}
-              <Slide top when={active}>
+              {/* <Slide top when={active}> */}
                 <input
                   autofocus
                   type="text"
@@ -94,11 +94,11 @@ const Contact = ({ active }) => {
                   className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
                   placeholder="Ingresa Tu Nombre"
                 />
-              </Slide>
+              {/* </Slide> */}
             </div>
-            <div className="my-5">
+            <div className="mt-1">
               {/* <label className="text-sm mb-2 md:text-lg text-black">Email</label> */}
-              <Slide top delay={200} when={active}>
+              {/* <Slide top delay={200} when={active}> */}
                 <input
                   type="email"
                   name="user_email"
@@ -106,12 +106,12 @@ const Contact = ({ active }) => {
                   className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
                   placeholder="www.ejemplo.com"
                 />
-              </Slide>
+              {/* </Slide> */}
             </div>
             <div className="mt-1">
               {/* <label className="text-sm mb-2 md:text-lg text-black">Message</label> */}
               <div className="mt-1">
-                <Slide top delay={400} when={active}>
+                {/* <Slide top delay={400} when={active}> */}
                   <textarea
                     name="message"
                     ref={ref3}
@@ -119,17 +119,17 @@ const Contact = ({ active }) => {
                     className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
                     placeholder="Dejanos Un Comentario"
                   ></textarea>
-                </Slide>
+                {/* </Slide> */}
               </div>
             </div>
 
-            <div className="mt-3 text-left">
+            <div className=" text-left">
               <button
                 onSubmit={clearInputs}
                 type="submit"
                 className="bg_animate inline-flex justify-center rounded-md bg-violet-700 py-3 px-8 text-sm text-white md:text-base"
               >
-                Save
+                Enviar
               </button>
             </div>
           </form>
