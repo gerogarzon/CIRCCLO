@@ -104,7 +104,7 @@ const Contact = ({ active }) => {
                   name="user_email"
                   ref={ref2}
                   className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
-                  placeholder="www.example.com"
+                  placeholder="www.ejemplo.com"
                 />
               </Slide>
             </div>
