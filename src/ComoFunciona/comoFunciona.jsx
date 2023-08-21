@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 
 // import Zoom from "react-reveal/Zoom";
 // import Slide from "react-reveal/Slide";
@@ -8,7 +8,7 @@ import como from "../assets/como-funciona.png";
 import paso1 from "../assets/paso1.png";
 import paso2 from "../assets/paso2.png";
 import paso3 from "../assets/paso3.png";
-import paso4 from "../assets/logo.png";
+// import paso4 from "../assets/logo.png";
 
 import "./ComoFunciona.css";
 
