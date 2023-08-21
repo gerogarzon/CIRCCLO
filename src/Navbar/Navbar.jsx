@@ -3,13 +3,14 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+import circclo from "../assets/circclo (4).png";
+
 import "./navbar.css";
 
 const navigation = [
-  { name: "<home>", href: "#firstPage", current: false },
-  { name: "<skills>", href: "#secondPage", current: false },
-  { name: "<projects>", href: "#thirdPage", current: false },
-  { name: "<contact>", href: "#fourthPage", current: false },
+  { name: "¿Cómo Funciona?", href: "#firstPage", current: false },
+  { name: "Beneficios", href: "#secondPage", current: false },
+  { name: "¡Quiero Sumarme!" , href: "#thirdPage", current: false },
 ];
 
 function classNames(...classes) {
@@ -30,14 +31,14 @@ export default function Navbar() {
   });
 
   return (
-    <Disclosure as="nav" className="bg-neutral-900 navbar_fixed">
+    <Disclosure as="nav" className="navbar_fixed">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -55,9 +56,9 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:text-white",
-                          "px-3 py-2 rounded-md text-lg font-medium hover:outline outline-violet-700",
+                            ? "bg-gray-900 text-gray-800"
+                            : "text-gray-800 hover:text-gray-800",
+                          "px-3 py-2 rounded-md text-lg font-medium hover:outline outline-blue-700",
                           item.href === currentPage ? "currentPage" : ""
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -68,13 +69,18 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-md bg-neutral-900 text-sm ">
-                      <p className="p-1 text-white text-3xl focus:outline hover:outline outline-violet-700 outline-offset-2 rounded-xl">
-                        Geronim<div className="circulo-logo"></div>
+                    <Menu.Button className="flex rounded-md text-sm ">
+                      <p className="p-1 text-white text-3xl  hover:outline outline-blue-700 outline-offset-2 rounded-xl">
+                        <img
+                          className="circclo-logo"
+                          alt="circclo-logo"
+                          src={circclo}
+                        ></img>
                       </p>
                     </Menu.Button>
                   </div>
@@ -87,13 +93,13 @@ export default function Navbar() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-violet-700 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-blue-700 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="https://www.linkedin.com/in/geronimo-garzon/"
+                            href="https://www.linkedin.com/company/circclo/"
                             className={classNames(
-                              active ? "bg-violet-600 text-white" : "",
+                              active ? "bg-blue-700 text-white" : "",
                               "block px-4 py-2 text-sm text-white "
                             )}
                           >
@@ -104,13 +110,13 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#fourthPage"
+                            href="#fifthPage"
                             className={classNames(
-                              active ? "bg-violet-600 " : "",
+                              active ? "bg-blue-700 " : "",
                               "block px-4 py-2 text-sm text-white "
                             )}
                           >
-                            Email
+                            ¡Quiero Sumarme!
                           </a>
                         )}
                       </Menu.Item>
@@ -130,9 +136,9 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-violet-700 text-white"
-                      : "hover:bg-violet-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium hover:bg-violet-700"
+                      ? "bg-gray-900 text-gray-800"
+                      : "hover:bg-violet-700 hover:text-gray-800",
+                    "block px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-violet-700"
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >

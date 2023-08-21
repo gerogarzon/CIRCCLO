@@ -2,10 +2,11 @@
     .contact_logo{ 
         height: 250px;
     }
+    
 }
 .bg_animate{
     background: 
-    linear-gradient(90deg,#f97316 50%,#6d28d9ed 0) 
+    linear-gradient(90deg,#29812d 50%,#0429D0 0) 
     var(--_p,100%)/200% no-repeat;
     transition: .5s;
     border:0;
@@ -13,3 +14,7 @@
  .bg_animate:hover{
   --_p:0%;
  }
+ .inputs input:focus::placeholder{
+    color: #fff !important;;
+ }
+ 

@@ -3,13 +3,16 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 // import assets
-import contact from "../assets/contact.png";
+import contact from "../assets/beneficio1.png";
+import quierosumarme from "../assets/quierosumarme.png";
+
+
 import Pulse from "react-reveal/Pulse";
 import Slide from "react-reveal/Slide";
 // import styles
 import "./contact.css";
 
-const Contact = () => {
+const Contact = ({ active }) => {
   const form = useRef();
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -64,57 +67,57 @@ const Contact = () => {
   };
   return (
     
-      <div className="flex flex-col h-screen md:justify-start 2xl:justify-center md:flex-row  md:p-6">
+      <div className="flex flex-col h-screen md:justify-start 2xl:justify-center md:flex-row md:p-6 pt-10">
         <div className="flex flex-col self-center  md:px-4">
-          <Pulse delay={1400}>
-            <img src={contact} alt="contact-logo" className="contact_logo" />
-          </Pulse>
+        
+            <img src={contact} alt="contact-logo" className="contact_logo max-w-xl" />
+         
         </div>
         <div className="flex flex-col self-center w-4/5 md:w-2/5 px-4">
-          <span className="text-orange-500 text-lg self-start md:pb-2">
-            &#60;contact&#62;
-          </span>
+        <Pulse delay={1400} when={active}>
+            <img src={quierosumarme} alt="contact-logo" className=" sumarmeLogo max-w-sm max-h-sm" />
+          </Pulse>
           <form
             id="myForm"
             className="contactme-form"
             ref={form}
             onSubmit={sendEmail}
           >
-            <div className="mt-0">
-              <label className="text-sm mb-2 md:text-lg">Name</label>
-              <Slide top>
+            <div className="my-5">
+              {/* <label className="text-sm mb-2 md:text-lg text-black">Name</label> */}
+              <Slide top when={active}>
                 <input
                   autofocus
                   type="text"
                   name="user_name"
                   ref={ref1}
-                  className="outline-violet-700 bg-neutral-900 mt-1 text-white w-full rounded-md outline outline-offset-2 outline-2 focus:outline-white sm:text-sm px-6 py-2"
-                  placeholder="Enter you name"
+                  className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
+                  placeholder="Ingresa Tu Nombre"
                 />
               </Slide>
             </div>
-            <div className="mt-1">
-              <label className="text-sm mb-2 md:text-lg">Email</label>
-              <Slide top delay={200}>
+            <div className="my-5">
+              {/* <label className="text-sm mb-2 md:text-lg text-black">Email</label> */}
+              <Slide top delay={200} when={active}>
                 <input
                   type="email"
                   name="user_email"
                   ref={ref2}
-                  className="mt-1 outline-violet-700 bg-neutral-900 text-white w-full rounded-md outline outline-offset-2 outline-2 focus:outline-white sm:text-sm px-6 py-2"
+                  className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
                   placeholder="www.example.com"
                 />
               </Slide>
             </div>
             <div className="mt-1">
-              <label className="text-sm mb-2 md:text-lg">Message</label>
+              {/* <label className="text-sm mb-2 md:text-lg text-black">Message</label> */}
               <div className="mt-1">
-                <Slide top delay={400}>
+                <Slide top delay={400} when={active}>
                   <textarea
                     name="message"
                     ref={ref3}
                     rows="3"
-                    className="mt-1 outline-violet-700 bg-neutral-900 text-white w-full rounded-md outline outline-offset-2 outline-2 focus:outline-white sm:text-sm px-6 py-2"
-                    placeholder="Enter your message"
+                    className="bg-neutral-900 text-white w-full rounded-md w-full px-6 py-4 inputs"
+                    placeholder="Dejanos Un Comentario"
                   ></textarea>
                 </Slide>
               </div>
@@ -124,15 +127,13 @@ const Contact = () => {
               <button
                 onSubmit={clearInputs}
                 type="submit"
-                className="bg_animate inline-flex justify-center rounded-md bg-violet-700 py-2 px-4 text-sm text-white md:text-base"
+                className="bg_animate inline-flex justify-center rounded-md bg-violet-700 py-3 px-8 text-sm text-white md:text-base"
               >
                 Save
               </button>
             </div>
           </form>
-          <span className="text-orange-500 text-lg self-start md:pt-2">
-            &#60;/contact&#62;
-          </span>
+          
         </div>
       </div>
   );

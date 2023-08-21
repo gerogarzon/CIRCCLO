@@ -1,0 +1,14 @@
+@media (max-width: 550px){
+    .reward{
+        height: 400px!important;
+        width: 400px!important;
+    }
+}
+.reward{
+    height: auto;
+    width:auto;
+}
+.reward1{
+    height: 100%;
+    width:100%;
+}

@@ -1,51 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Navbar from "./Navbar/Navbar";
-import Home from "./Home/Home";
-import Skills from "./Skills/Skills";
-import Projects from "./Projects/Projects";
+import ComoFunciona from "./ComoFunciona/comoFunciona";
+import Beneficios from "./Beneficios/Beneficios";
 import Contact from "./Contact/Contact";
 
 import "./App.css";
 
 function App() {
+  const [activeComoFunciona, setActiveComoFunciona] = useState(false);
+
+  const handleAfterLoad = (origin, destination, direction, trigger) => {
+    if (destination.anchor === "firstPage" | destination.anchor === "secondPage" | destination.anchor === "thirdPage") {
+      // Cambiar "thirdPage" al ancla de la sección ComoFunciona
+      setActiveComoFunciona(true);
+    } else {
+      setActiveComoFunciona(false);
+    }
+    
+  };
+
   return (
-      
-      
     <div className="App">
-      <Navbar/>
-      <ReactFullpage  
+      <Navbar />
+      <ReactFullpage
+        afterLoad={handleAfterLoad}
         //fullpage options
         navigation
-        anchors={["firstPage", "secondPage", "thirdPage", "fourthPage"]}
-        navigationTooltips={['&#60; home &#62;', '&#60; skills &#62;','&#60; projects &#62;','&#60; contact &#62;']}
-        slidesNavigation={false} 
-        slidesNavPosition={'bottom'}
-        scrollingSpeed={700} 
-        scrollHorizontally= {true}
+        anchors={["firstPage", "secondPage", "thirdPage"]}
+        navigationTooltips={["¿Cómo Funciona?", "Beneficios", "Contactenos"]}
+        slidesNavigation={false}
+        slidesNavPosition={"bottom"}
+        scrollingSpeed={500}
+        fitToSection={false}
         easing={"easeInOutCubic"}
         parallax={true}
-        lazyLoading={true} 
+        lazyLoading={true}
         render={({ fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <div id="section1" className="section">
-                <Home/>
+              <div id="section1" className="section" data-anchor="firstPage">
+                <ComoFunciona active={activeComoFunciona} />
               </div>
-              <div id="section2" className="section">
-                <Skills/>
+              <div id="section2" className="section" data-anchor="secondPage">
+                <Beneficios active={activeComoFunciona} />
               </div>
-              <div id="section3" className="section">         
-                <Projects/>  
-              </div>
-              <div id="section4" className="section">
-                <Contact/>
+              <div id="section3" className="section" data-anchor="thirdPage">
+                <Contact active={activeComoFunciona} />
               </div>
             </ReactFullpage.Wrapper>
           );
         }}
-        />
+      />
     </div>
   );
 }

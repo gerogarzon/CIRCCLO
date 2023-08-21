@@ -1,0 +1,8 @@
+.probemaBG{
+    background-image:url(../assets/problema.jpg);
+    /* background-size: 100vh 100vh; */
+
+}
+.altura{
+    height: calc(h-screen - 64px)!important;
+}

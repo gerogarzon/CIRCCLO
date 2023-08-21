@@ -1,6 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import cv from "../assets/cv.pdf";
+
 
 import "./skills.css";
 
@@ -42,14 +42,14 @@ const Skills = () => {
               </p>
             </Fade>
             <Fade bottom delay={800}>
-              <a
+              {/* <a
                 href={cv}
                 download="Garzon,Geronimo-CV.pdf"
                 type="submit"
                 className="bg_animate w-fit mt-1 md:mt-6 self-start inline-flex justify-end rounded-md bg-violet-700 py-2 px-4 text-sm text-white"
               >
                 Curriculum
-              </a>
+              </a> */}
               <p className="mt-2 text-sm text-gray-500 self-start">
                 Click to download pdf
               </p>

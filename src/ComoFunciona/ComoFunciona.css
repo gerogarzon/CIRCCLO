@@ -1,0 +1,14 @@
+@media (max-width: 550px){
+    .avatar{
+        max-height: 200px;
+        width:250px;
+    }
+    .avatar2{
+        max-height: 200px;
+        width:150px; 
+    }
+}
+
+.fp-table{
+    justify-content: flex-start;
+}

@@ -2,9 +2,19 @@
   display: none!important;
 }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
- background: #6d28d9 !important;;
+ background: #0429D0 !important;
+ color: #0429D0!important;
 }
-.fp-prev{
+.fp-is-overflow>.fp-overflow {
+  overflow-x: hidden !important;
+}
+.fp-sr-only:hover{
+  color: black !important;
+}
+
+
+
+/* .fp-prev{
   border-width: 30px 30px 30px 0!important;
   border-color: transparent #6d28d9 transparent transparent!important;
   left: 60px !important;
@@ -23,4 +33,4 @@
     border-width: 20px 0px 20px 20px!important;
     right: 5px !important;
   }
-}
+} */
