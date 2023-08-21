@@ -15,8 +15,8 @@ import "./ComoFunciona.css";
 const ComoFunciona = ({ active }) => {
 
   return (
-    <div className="flex flex-col funciona sm:pt-40  justify-center sm:flex-row sm:justify-center ">
-      <div className="flex-row  self-center pb-5 sm:pb-0 px-10 ">
+    <div className="flex flex-col funciona  justify-center sm:flex-row sm:justify-center ">
+      <div className="flex-row  self-center pb-5 sm:pb-0 px-10 sm:ox-0">
         <Fade left  when={active}>
           <img
             className="self-center avatar md:w-full"

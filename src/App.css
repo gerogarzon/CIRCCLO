@@ -7,6 +7,7 @@
 }
 .fp-is-overflow>.fp-overflow {
   overflow-x: hidden !important;
+  
 }
 .fp-sr-only:hover{
   color: black !important;

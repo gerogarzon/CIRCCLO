@@ -25,17 +25,20 @@ function App() {
     <div className="App">
       <Navbar />
       <ReactFullpage
+      touchSensitivity={15}
        fitToSection={true}
+       scrollBar={false}
+       scrollHorizontally={false}
         afterLoad={handleAfterLoad}
         //fullpage options
         navigation
         anchors={["firstPage", "secondPage", "thirdPage"]}
         navigationTooltips={["¿Cómo Funciona?", "Beneficios", "Contactenos"]}
-        slidesNavigation={false}
-        slidesNavPosition={"bottom"}
+        // slidesNavigation={false}
+        // slidesNavPosition={"bottom"}
         scrollingSpeed={500}
-        easing={"easeInOutCubic"}
-        parallax={true}
+        // easing={"easeInOutCubic"}
+        // parallax={true}
         lazyLoading={true}
         render={({ fullpageApi }) => {
           return (
