@@ -8,7 +8,7 @@ import "./Beneficios.css";
 
 function Beneficios({ active }) {
   return (
-    <div className=" flex flex-col sm:flex-row  w-full h-full sm:pt-10 pt-40">
+    <div className=" flex flex-col sm:flex-row  w-full h-full sm:pt-10 pt-10 sm:pt-40">
       <div className="flex flex-row self-start sm:flex-col w-full h-full sm:pt-10 ">
         <Fade clear delay={100} when={active}>
           <img
