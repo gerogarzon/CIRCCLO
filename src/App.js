@@ -25,6 +25,7 @@ function App() {
     <div className="App">
       <Navbar />
       <ReactFullpage
+       fitToSection={true}
         afterLoad={handleAfterLoad}
         //fullpage options
         navigation
@@ -33,7 +34,6 @@ function App() {
         slidesNavigation={false}
         slidesNavPosition={"bottom"}
         scrollingSpeed={500}
-        fitToSection={false}
         easing={"easeInOutCubic"}
         parallax={true}
         lazyLoading={true}

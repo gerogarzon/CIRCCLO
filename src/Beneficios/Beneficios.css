@@ -10,12 +10,11 @@
     height: auto;
     width:auto;
 }
-/* .reward1{
-    height: 100%;
-    width:100%;
-} */
-
 .beneficios{
     height: calc(100vh - 64px) !important;
     width: 100vw!important;
 }
+/* .reward1{
+    height: 100%;
+    width:100%;
+} */
