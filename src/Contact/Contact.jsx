@@ -19,16 +19,17 @@ const Contact = ({ active }) => {
   const ref3 = useRef(null);
 
   const clearInputs = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // 👇️ clear input field value
     ref1.current.value = "";
     ref2.current.value = "";
     ref3.current.value = "";
-    console.log("in");
   };
 
   const sendEmail = async (e) => {
+
     e.preventDefault();
+
     if (
       e.currentTarget.user_name.value === "" ||
       e.currentTarget.user_email.value === "" ||
@@ -37,10 +38,11 @@ const Contact = ({ active }) => {
       Swal.fire({
         icon: "error",
         title: "Dejaste campos vacios",
-        timer: 1500,
+        timer: 500,
       });
       return;
     }
+
     await emailjs
       .sendForm(
         "service_ep2sitp",
@@ -56,14 +58,14 @@ const Contact = ({ active }) => {
           console.log(error.text);
         }
       )
-      .then(
+      .then(() => { // Mueve el clearInputs aquí dentro
         Swal.fire({
           icon: "success",
           title: "Tu email ha sido enviado!",
           timer: 2000,
-        })
-      );
-    clearInputs();
+        });
+        clearInputs(); // Restablece los valores de los campos de entrada
+      });
   };
   return (
     
@@ -125,7 +127,7 @@ const Contact = ({ active }) => {
 
             <div className=" text-left">
               <button
-                onSubmit={clearInputs}
+                // onSubmit={clearInputs}
                 type="submit"
                 className="bg_animate inline-flex justify-center rounded-md bg-violet-700 py-3 px-8 text-sm text-white md:text-base"
               >
