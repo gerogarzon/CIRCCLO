@@ -36,17 +36,17 @@ const Contact = ({ active }) => {
     ) {
       Swal.fire({
         icon: "error",
-        title: "No empty entries allowed",
+        title: "Dejaste campos vacios",
         timer: 1500,
       });
       return;
     }
     await emailjs
       .sendForm(
-        "service_qe1it9h",
-        "template_n6a2lje",
+        "service_ep2sitp",
+        "template_msbwvqh",
         form.current,
-        "UibsY4UnD3uZLnpfw"
+        "aD2lu0GcRpPsxqDAy"
       )
       .then(
         (result) => {
@@ -59,7 +59,7 @@ const Contact = ({ active }) => {
       .then(
         Swal.fire({
           icon: "success",
-          title: "Your email has been sent",
+          title: "Tu email ha sido enviado!",
           timer: 2000,
         })
       );
